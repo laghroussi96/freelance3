@@ -140,6 +140,28 @@ public class Admin implements Serializable {
         this.id = id;
     }
 
+    public Admin() {
+    }
+
+    public Admin(long id) {
+        this.id = id;
+    }
+
+    public Admin(long id, String nom, String prenom, Pays pays, User user, List<Recruteur> recruteurs, List<Paiement> paiements, List<Operation> operations, List<Notification> notifications, List<Mission> missions, List<Freelancer> freelancers) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.pays = pays;
+        this.user = user;
+        this.recruteurs = recruteurs;
+        this.paiements = paiements;
+        this.operations = operations;
+        this.notifications = notifications;
+        this.missions = missions;
+        this.freelancers = freelancers;
+    }
+    
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -162,7 +184,9 @@ public class Admin implements Serializable {
 
     @Override
     public String toString() {
-        return "bean.Admin[ id=" + id + " ]";
+        return "Admin{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + '}';
     }
+
+    
     
 }
